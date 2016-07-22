@@ -3,8 +3,8 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.get('/',function(req,res){
-  var headers = req.ip;
-  res.json(headers);
+  var ip = req.headers;
+  res.json(ip);
 })
 
 app.listen(PORT);
