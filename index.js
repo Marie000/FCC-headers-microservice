@@ -3,7 +3,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.get('/',function(req,res){
-  var headers = req.connection.remoteAddress;
+  var headers = req.ip;
   res.json(headers);
 })
 
